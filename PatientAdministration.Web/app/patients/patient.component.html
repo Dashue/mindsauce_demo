@@ -1,0 +1,38 @@
+<h4>Add Patient</h4>
+
+<form ng-submit="$ctrl.add($ctrl.patient)" name="$ctrl.patientForm">
+
+  <div class="form-group">
+    <label class="control-label" for="firstname">Firstname</label>
+    <input type="text" id="firstname" class="form-control" minlength="1" required ng-model="$ctrl.patient.firstname" />
+
+    <label class="control-label" for="surname">Surname</label>
+    <input type="text" id="surname" class="form-control" minlength="3" required ng-model="$ctrl.patient.surname" />
+
+    <label class="control-label" for="birthdate">Birthdate</label>
+    <input type="date" id="birthdate" class="form-control" required ng-model="$ctrl.patient.birthdate" />
+
+    <label class="control-label" for="note">Note</label>
+    <textarea id="birthdate" class="form-control" ng-model="$ctrl.patient.note"></textarea>
+  </div>
+
+  <div class="form-group">
+    <button type="reset" ng-click="$ctrl.patient = {}" class="btn btn-default">Reset</button>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </div>
+</form>
+
+<div>
+  <span class="label-danger" ng-show="$ctrl.error">{{$ctrl.error}}</span>
+</div>
+
+<div class="label-danger" ng-show="$ctrl.validationErrors">
+  <ul>
+    <li ng-repeat="item in $ctrl.validationErrors">
+      {{item.key}}
+      <ul>
+        <li ng-repeat="error in item.errors">{{error}}</li>
+      </ul>
+    </li>
+  </ul>
+</div>

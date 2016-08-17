@@ -1,0 +1,16 @@
+  <h4>My Patients</h4>
+
+  <table class="table table table-bordered">
+    <tr>
+      <th>Firstname</th>
+      <th>Surname</th>
+      <th>Birthdate</th>
+      <th>Note</th>
+    </tr>
+    <tr ng-repeat="patient in $ctrl.patients">
+      <td>{{patient.firstname}}</td>
+      <td>{{patient.surname}}</td>
+      <td>{{patient.birthdate | date:'yyyy-MM-dd'}}</td>
+      <td>{{patient.note}}</td>
+    </tr>
+  </table>

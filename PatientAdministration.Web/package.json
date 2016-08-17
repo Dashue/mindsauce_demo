@@ -1,0 +1,16 @@
+{
+  "name": "mindsauce.demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-serve": "^1.4.0",
+    "gulp-typescript": "^2.13.6",
+    "gulp-watch": "^4.3.9"
+  },
+  "dependencies": {}
+}

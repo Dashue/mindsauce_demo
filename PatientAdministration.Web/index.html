@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-component-router/angular_1_router.js"></script>
+  <script src="/bower_components/angular-component-router/ng_route_shim.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script src="app/main.js"></script>
+  <script src="app/Patients/patient.service.js"></script>
+</head>
+
+<body ng-app="MindSauceDemo">
+
+  <div class="container">
+    <nav class="navbar navbar-default ">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand" ng-link="['App']">Patient Administration</div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a ng-link="['MyPatients']" href="">My Patients</a>
+            </li>
+            <li>
+              <a ng-link="['AddPatient']" href="">Add Patient</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <ng-outlet></ng-outlet>
+  </div>
+
+</body>
+
+</html>
